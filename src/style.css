@@ -1,3 +1,25 @@
 body {
     background-color: gray;
 }
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+.home, .menu, .about, .location {
+width: 25%;
+height: 2.5rem;
+font-size: 30px;
+}
+#img {
+    width: auto;
+    height: 25rem;
+    background-image: url('./images/homePicture.png');
+    background-position: center;
+    background-size: cover;
+    display: block;
+}
+#homePicture {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}

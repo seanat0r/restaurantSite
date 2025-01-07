@@ -12,6 +12,9 @@ module.exports = {
 	},
 	devtool: "eval-source-map",
 	devServer: {
+		static: path.join(__dirname, "dist"),
+		compress: true,
+		port: 8080,
 		watchFiles: ["./src/index.html"],
 	},
 	plugins: [

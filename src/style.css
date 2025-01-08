@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: #333333;
 }
 nav {
     display: flex;
@@ -10,7 +10,11 @@ width: 25%;
 height: 2.5rem;
 font-size: 30px;
 }
+#home {
+    display: block
+}
 #img {
+    display: block;
     width: auto;
     height: 25rem;
     background-image: url('./images/homePicture.png');
@@ -22,4 +26,22 @@ font-size: 30px;
     visibility: hidden;
     width: 0;
     height: 0;
+}
+#wrapper {
+    margin: 1rem;
+    border: 10px double #000080;
+    border-radius: 70px 20px;
+}
+
+#homeTitle {
+    margin: 1rem 1rem 1rem 1rem;
+    text-align: center;
+    font-size: 50px;
+    color: #bef9ff;
+}
+#homeText {
+    margin: 1rem 1rem 1rem 1rem;
+    font-size: 25px;
+    line-height: 2.5rem;   
+    color: #bef9ff; 
 }

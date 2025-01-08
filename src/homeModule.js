@@ -5,8 +5,8 @@ import { createDiv } from "./smallRepetitiveFunctions";
 import homePicture from "./images/homePicture.png";
 
 export default class Home {
-	#imgDiv = null;
-	#homeDiv = null;
+	#imgDivHome = null;
+	#homeDivHome = null;
 
 	createHomeLayout() {
 		const divImg = createDiv("img");
@@ -15,8 +15,8 @@ export default class Home {
 		mainContent.appendChild(divImg);
 		mainContent.appendChild(divHome);
 
-		this.#imgDiv = document.querySelector("#img");
-		this.#homeDiv = document.querySelector("#home");
+		this.#imgDivHome = document.querySelector("#img");
+		this.#homeDivHome = document.querySelector("#home");
 	}
 	createImgLayout() {
 		const imgDiv = document.querySelector("#img");
@@ -28,11 +28,11 @@ export default class Home {
 		const img = document.createElement("img");
 		img.setAttribute("id", "homePicture");
 		img.alt = "Eating Hall from our Restaurant";
-		this.#imgDiv.appendChild(img);
+		this.#imgDivHome.appendChild(img);
 	}
 	createTextLayout() {
 		//checks if the div exists
-		if (!this.#homeDiv) {
+		if (!this.#homeDivHome) {
 			return console.log(homeDiv + "doesn't exist");
 		}
 
@@ -45,7 +45,7 @@ export default class Home {
 		p.setAttribute("id", "homeText");
 
 		wrapper.append(h1, p);
-        this.#homeDiv.appendChild(wrapper);
+		this.#homeDivHome.appendChild(wrapper);
 	}
 	fillText() {
 		const h1 = document.querySelector("#homeTitle");
@@ -58,7 +58,14 @@ export default class Home {
 		h1.textContent = "";
 		p.textContent = "";
 
-        h1.textContent = "A taste of Borinburg";
-        p.textContent = "At Medin, we believe that the heart of a community lies in its culinary traditions. We're passionate about showcasing the vibrant flavors and rich heritage of Borinburg through our menu of authentic, homemade dishes.From [mention a few signature dishes, e.g., 'Grandma's potato' to 'locally-sourced pepe', each dish on our menu tells a story. We use the freshest, seasonal ingredients sourced from local farmers and purveyors whenever possible, ensuring that every bite is a true reflection of our region's bounty.Our cozy restaurant provides a warm and inviting atmosphere where you can savor the flavors of Borinburg while enjoying the company of friends and family. Whether you're a local resident or a visitor exploring our beautiful corner of the world, we invite you to experience the taste of Borinburg at Borinburg.";
+		h1.textContent = "A taste of Borinburg";
+		p.textContent =
+			"At Medin, we believe that the heart of a community lies in its culinary traditions. We're passionate about showcasing the vibrant flavors and rich heritage of Borinburg through our menu of authentic, homemade dishes. From mention a few signature dishes, e.g., 'Grandma's potato' to 'locally-sourced pepe', each dish on our menu tells a story. We use the freshest, seasonal ingredients sourced from local farmers and purveyors whenever possible, ensuring that every bite is a true reflection of our region's bounty. Our cozy restaurant provides a warm and inviting atmosphere where you can savor the flavors of Borinburg while enjoying the company of friends and family. Whether you're a local resident or a visitor exploring our beautiful corner of the world, we invite you to experience the taste of Borinburg at Medin.";
 	}
+    get homeDivHome() {
+        return this.#homeDivHome;
+    }
+    get imgDivHome() {
+        return this.#imgDivHome;
+    }
 }

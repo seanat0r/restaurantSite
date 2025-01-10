@@ -10,9 +10,7 @@ width: 25%;
 height: 2.5rem;
 font-size: 30px;
 }
-#home {
-    display: block
-}
+/* HOME */
 #img {
     display: block;
     width: auto;
@@ -27,21 +25,52 @@ font-size: 30px;
     width: 0;
     height: 0;
 }
-#wrapper {
+#wrapper, #location, #about {
     margin: 1rem;
     border: 10px double #000080;
     border-radius: 70px 20px;
 }
 
-#homeTitle {
+
+h1 {
     margin: 1rem 1rem 1rem 1rem;
     text-align: center;
     font-size: 50px;
     color: #bef9ff;
 }
-#homeText {
+p {
     margin: 1rem 1rem 1rem 1rem;
     font-size: 25px;
     line-height: 2.5rem;   
     color: #bef9ff; 
+}
+/* ABOUT */
+#aboutPicture {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+#imgPicture {
+    display: block;
+    width: auto;
+    height: 25rem;
+    background-image: url('./images/about-picture.png');
+    background-position: center;
+    background-size: cover;
+    display: block;
+}
+/* Location */
+#locationPicture {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+#locationImgPicture {
+    display: block;
+    width: auto;
+    height: 25rem;
+    background-image: url('./images/locationPicture.png');
+    background-position: center;
+    background-size: cover;
+    display: block;
 }

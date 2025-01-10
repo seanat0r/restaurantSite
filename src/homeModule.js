@@ -8,7 +8,7 @@ export default class Home {
 	#imgDivHome = null;
 	#homeDivHome = null;
 
-	createHomeLayout() {
+	createLayout() {
 		const divImg = createDiv("img");
 		const divHome = createDiv("home");
 

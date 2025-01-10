@@ -1,6 +1,6 @@
 import "./style.css";
 
-import {mainContent as content} from "./smallRepetitiveFunctions.js"
+import { mainContent as content } from "./smallRepetitiveFunctions.js";
 
 import Home from "./homeModule.js";
 import About from "./AboutModule.js";
@@ -20,40 +20,42 @@ const locationBtn = document.querySelector(".location");
 let firstTimeOnPage = true;
 
 function clearContent() {
-    content.innerHTML = "";
+	content.innerHTML = "";
 }
 
 function showTab(tab) {
-    clearContent();
-    tab.createHomeLayout();
-    tab.createImgLayout();
-    tab.createTextLayout();
-    tab.fillText();
+	clearContent();
+	tab.createLayout();
+	tab.createImgLayout();
+	tab.createTextLayout();
+	tab.fillText();
 }
 
 function changeTabs() {
-    homeBtn.addEventListener("click", () => {
-        showTab(home);
-    });
-    aboutBtn.addEventListener("click", () => {
-        showTab(about);
-    });
-    menuBtn.addEventListener("click", () => {
-        showTab(menu);
-    });
-    locationBtn.addEventListener("click", () => {
-        showTab(location);
-    });
-
-    if (firstTimeOnPage) {
-        showTab(home);
-        firstTimeOnPage = false;
-    }
-
+	document.querySelector("nav").addEventListener("click", (event) => {
+		const target = event.target;
+		switch (target) {
+			case homeBtn:
+				showTab(home);
+				break;
+			case aboutBtn:
+				showTab(about);
+				break;
+			case menuBtn:
+				showTab(menu);
+				break;
+			case locationBtn:
+				showTab(location);
+				break;
+            default:
+                console.log("No tab selected");
+                break;
+		}
+	});
+	if (firstTimeOnPage) {
+		showTab(home);
+		firstTimeOnPage = false;
+	}
 }
 
 changeTabs();
-
-
-
-

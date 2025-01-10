@@ -63,7 +63,6 @@ export default class Aboutrest {
 			"At Medin, we believe that food is more than just sustenance; it's a reflection of culture, community, and the land. We're passionate about showcasing the vibrant flavors and rich culinary heritage of Borinburg through our menu of authentic, homemade dishes. From Grandma Elsa's hearty Oven to locally-sourced Etkar, each dish on our menu tells a story. We use the freshest, seasonal ingredients sourced from local farmers and purveyors whenever possible, ensuring that every bite is a true reflection of our region's bounty. Our inviting restaurant provides a warm and welcoming atmosphere where you can savor the flavors of Borinburg while enjoying the company of friends and family. Whether you're a local resident or a visitor exploring our beautiful corner of the world, we invite you to experience the taste of Borinburg at Medin.";
 	}
 
-	// Getter für die Bild- und Content-Divs
 	get imgDiv() {
 		return this.#imgDivAbout;
 	}

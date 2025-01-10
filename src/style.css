@@ -25,7 +25,7 @@ font-size: 30px;
     width: 0;
     height: 0;
 }
-#wrapper, #location, #about {
+#wrapper, #location, #about, #menu {
     margin: 1rem;
     border: 10px double #000080;
     border-radius: 70px 20px;
@@ -38,11 +38,34 @@ h1 {
     font-size: 50px;
     color: #bef9ff;
 }
+h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #bef9ff;
+}
 p {
     margin: 1rem 1rem 1rem 1rem;
     font-size: 25px;
     line-height: 2.5rem;   
     color: #bef9ff; 
+}
+ul {
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+li {
+    width: 50%;
+    border: 10px dotted #0101a8;
+    border-radius: 350px 100px;
+    margin: 1rem;
+}
+li > p {
+    padding: 0.25rem;
+    text-align: center;
+    line-height: normal;
 }
 /* ABOUT */
 #aboutPicture {
@@ -55,7 +78,7 @@ p {
     width: auto;
     height: 25rem;
     background-image: url('./images/about-picture.png');
-    background-position: center;
+    background-position: top 28% right 50%;;
     background-size: cover;
     display: block;
 }
@@ -70,6 +93,21 @@ p {
     width: auto;
     height: 25rem;
     background-image: url('./images/locationPicture.png');
+    background-position: center;
+    background-size: cover;
+    display: block;
+}
+/* Menu */
+#menuePicture {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+#menuePictureImage {
+    display: block;
+    width: auto;
+    height: 25rem;
+    background-image: url('./images/menu-picture.png');
     background-position: center;
     background-size: cover;
     display: block;
